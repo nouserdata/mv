@@ -1,10 +1,17 @@
 from pyrogram import filters, Client as bot
-from modules import (
-    awadhfree, ifasfree, verbalfree, cdsfree, icsfree, pw, khan, kd, cp, neon,
-    appx_master, testlivefree, utk, kaksha, pwfree, khanfree, iq,
-    vision, nidhi, cpfree, allen, iqfree, ifas, pathfree,
-    allenv2, abhinavfree, vajiram, qualityfree, jrffree, cw
-)
+
+# Modules को Try-Except से इग्नोर करें
+try:
+    from modules import (
+        awadhfree, ifasfree, verbalfree, cdsfree, icsfree, pw, khan, kd, cp, neon,
+        appx_master, testlivefree, utk, kaksha, pwfree, khanfree, iq,
+        vision, nidhi, cpfree, allen, iqfree, ifas, pathfree,
+        allenv2, abhinavfree, vajiram, qualityfree, jrffree, cw
+    )
+except ModuleNotFoundError:
+    print("⚠️ Warning: 'modules' folder not found. Skipping module imports.")
+
+# बाकी इंपोर्ट्स
 import master.key as key, msg
 from config import Config
 from database import db
