@@ -1,5 +1,4 @@
 from pyrogram import filters, Client as bot
-import master.key as key, msg
 from config import Config
 from database import db
 import buttom
